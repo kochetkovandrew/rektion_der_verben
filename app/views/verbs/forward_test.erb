@@ -1,0 +1,42 @@
+<%= hidden_field_tag :page_id, 'verbs_forward_test' %>
+<%= hidden_field_tag :ids, @verbs.shuffle.collect{|vr| vr.id}.join(',') %>
+
+<p>&nbsp;</p>
+<div id="quiz">
+	<p id="verb">
+	</p>
+	<% if Settings[@language]['translation_first'] %>
+		<p id="translations">
+		</p>
+	<% end %>
+	<p id="prepositions">
+	</p>
+	<% if !Settings[@language]['translation_first'] %>
+		<p id="translations">
+		</p>
+	<% end %>
+	<% if Settings[@language]['use_case'] %>
+		<p id="case">
+			<h3><%= t(:case).mb_chars.upcase.to_s %></h3>
+			<label class="radio inline clickable_case"><input type="radio" name="case" value="Dativ">Dativ</label>
+			<label class="radio inline clickable_case"><input type="radio" name="case" value="Akkusativ">Akkusativ</label>
+		</p>
+	<% end %>
+</p>
+
+<p id="button_p">
+    <button id="check" class="btn btn-primary btn-xlarge" type="button"><%= t :check %></button>
+</p>
+
+<div id="right">
+	<h2><%= t(:correct).mb_chars.upcase.to_s %></h2>
+</div>
+<div id="wrong">
+	<h2><%= t(:incorrect).mb_chars.upcase.to_s %></h2>
+</div>
+
+<p id="error_count">
+</p>
+
+<p id="right_answers">
+</p>

@@ -1,0 +1,25 @@
+<h1>Benutzer</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Email</th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.email %></td>
+    <td><%= link_to 'Show', user %>
+        <%= link_to 'Edit', edit_user_path(user) %>
+        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if !user.admin %>
+        	<%= link_to 'Give admin privileges', :controller => :users, :action => :set_admin, :id => user.id %>
+        <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path %>

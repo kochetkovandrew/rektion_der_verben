@@ -1,0 +1,43 @@
+// Place all the styles related to the verbs_rektions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p.clickable_preposition {
+  float: left;
+}
+
+p#button_p {
+  clear: both;
+}
+
+p#case {
+  clear: both;
+}
+
+button#check {
+  width: 100px;
+}
+
+div#right h2 {
+  color: green; 
+}
+
+div#wrong h2 {
+  color: red; 
+}
+
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+input:radio {
+  padding-right: 3px;
+}
+
+div.padded {
+  padding-left: 50px;
+  padding-right: 50px;
+}

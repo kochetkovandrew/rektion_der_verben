@@ -1,0 +1,56 @@
+<%= hidden_field_tag :form_id, 'words_form' %>
+<%= form_for(@word) do |f| %>
+  <% if @word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
+
+      <ul>
+      <% @word.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  	<%= f.label t :level %>
+  	<%= select(:level, :id, Level.order(:name).all.collect{|l| [l.name, l.id]}, :selected => (@word.topic.nil? ? nil : @word.topic.level_id))%>
+  </div>
+  <div class="field">
+  	<%= f.label t :topic %>
+  	<%= f.select :topic_id, (@word.topic.nil? ? [] : Topic.order(:name).where(:level_id => @word.topic.level_id).all.collect{|t| [t.name, t.id]})%>
+  </div>
+  <div class="field">
+    <%= f.label t :part %><br />
+    <%= f.number_field :part %>
+  </div>
+  <div class="field">
+    <%= f.label t :word %><br />
+    <%= f.text_field :word %>
+  </div>
+  <div class="field">
+    <%= f.label t :speech_part %><br />
+    <% [['Substantiv', 'noun'], ['Adjektiv', 'adjective'], ['Verb', 'verb']].each do |speech_part| %>
+    	<label class="radio inline">
+    		<%= f.radio_button :speech_part, speech_part[1] %>
+    		<%= speech_part[0] %>
+		</label>
+    <% end %>
+  </div>
+  <div class="field" id="article">
+    <%= f.label t :article %><br />
+    <% ['der', 'die', 'das'].each do |article| %>
+    	<label class="radio inline">
+    		<%= f.radio_button :article, article %>
+    		<%= article %>
+		</label>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :translation %><br />
+    <%= f.text_field :translation %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class=> 'btn btn-primary' %>
+  </div>
+<% end %>

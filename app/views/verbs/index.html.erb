@@ -1,0 +1,30 @@
+<h1>Listing verbs</h1>
+<table class="table table-striped">
+  <tr>
+    <th>Verb</th>
+    <th>Preposition</th>
+    <th>Case</th>
+    <th>Translation</th>
+    <th>Clarification</th>
+    <th>Part</th>
+    <th></th>
+  </tr>
+
+<% @verbs.each do |verb| %>
+  <tr>
+    <td><%= verb.verb %></td>
+    <td><%= verb.preposition %></td>
+    <td><%= verb.case %></td>
+    <td><%= verb.translation %></td>
+    <td><%= verb.clarification %></td>
+    <td><%= verb.part %></td>
+    <td><%= link_to 'Show', verb %>
+        <%= link_to 'Edit', edit_verb_path(verb) %>
+        <%= link_to 'Destroy', verb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Verb', new_verb_path %>

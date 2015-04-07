@@ -1,0 +1,47 @@
+<div class="text-center pagination-centered center-block">
+  <p>
+  	<%= t :you_learn %>:
+      <% ['de', 'en'].each do |lang_code| %>
+    	<label class="radio inline" style="padding-top: 0px;">
+   		<input type="radio" name="language" value="<%= lang_code %>">
+          <%= image_tag('/images/' + lang_code + '.png', :class => 'lang_button', :id => ('lang_button_' + lang_code)) %>
+        </input>
+      <% end %>
+    </label>
+  </p>
+  <p>&nbsp;</p>
+    <%= form_tag("/verbs/forward_test") do |f| %>
+      <h3><%= t :phrasal_verbs %></h3> 
+      <p>
+        <select id="part_id" name="part_id" class="input-large" size="3">
+  	      <% @verbs_parts.each do |part| %>
+            <option value="<%=part[1]%>"><%= t :part %> <%=part[0]%></option>
+  		  <% end %>
+		</select>
+	  </p>
+	  <button id="start_verb_test" class="btn btn-primary btn-large"><%= t :start_test %></button>
+	<% end %>
+	<%= form_tag("/words/forward_test", :id => :words_training) %>
+      <h3><%= t :vocabular %></h3>
+      <label class="radio inline"><%= t :level %></label>
+      <% Level.order(:name).all.each do |level| %>
+        <label class="radio inline">
+        	<input type="radio" name="level_id" value="<%= level.id %>">
+        	<%= level.name %>
+    	</label>
+      <% end %>
+      <br/>
+      <div class="inline">
+      	<%= t :topic %><br/>
+      <select id="topic_id" name="topic_id" class="input-large" size="3">
+	  </select>
+	  </label>
+	  <label class="inline">
+	  	<%= t :part %><br/>
+      <select id="part" name="part" class="input-large" size="3">
+	  </select>
+	  </label>
+      <br/>
+	  <button id="start_words_test" class="btn btn-primary btn-large"><%= t :start_test %></button>
+    </form>
+</div>

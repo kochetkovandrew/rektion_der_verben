@@ -1,0 +1,40 @@
+de:
+  noun: 'Substantiv'
+  adjective: 'Adjektiv'
+  verb: 'Verb'
+  article: 'Artikel'
+  word: 'Wort'
+  translation: 'Übersetzung'
+  level: 'Niveau'
+  topic: 'Thema'
+  speech_part: 'Wortart'
+  part: 'Teil'
+  words: 'Wörter'
+  phrasal_verbs: 'Die Rektion der Verben'
+  vocabular: 'Wortschatz'
+  level: 'Niveau'
+  start_test: Test starten
+  main_page: Hauptseite
+  user: Benutzer
+  users: Benutzer
+  topics: Themen
+  sign_out: Abmelden
+  sign_in: Anmelden
+  sign_up: Registrieren
+  password: Passwort
+  case: Kasus
+  preposition: Präposition
+  translation: Übersetzung
+  correct: Korrekt
+  incorrect: Inkorrekt
+  your_language: Ihre Sprache
+  you_learn: Sie lernen
+  check: Checken
+  js:
+    preposition: Präposition
+    translation: Übersetzung
+    you_know: Sie weißen
+    words: Wörter
+    incorrect_answers: Inkorrekte Antworten
+    all_is_ok: 'ALLES IST GUT!'
+    part: Teil

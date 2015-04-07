@@ -1,0 +1,24 @@
+<h1>Topics</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Niveau</th>
+    <th>Name</th>
+    <th></th>
+  </tr>
+
+<% @topics.each do |topic| %>
+  <tr>
+  	<td><%= topic.level.name %></td>
+    <td><%= topic.name %></td>
+    <td><%= link_to 'Show', topic %>
+        <%= link_to 'Edit', edit_topic_path(topic) %>
+        <%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Download', :controller => :words, :action => :download, :topic_id => topic.id %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Neues topic', new_topic_path %>

@@ -1,0 +1,22 @@
+be:
+  noun: 'Назоўнiк'
+  adjective: 'Прыметнік'
+  verb: 'Дзеяслоў'
+  article: 'Артыкль'
+  word: 'Слова'
+  translation: 'Пераклад'
+  level: 'Ўзровень'
+  topic: 'Тэма'
+  speech_part: 'Часціна мовы'
+  part: 'Частка'
+  words: 'Словы'
+  phrasal_verbs: 'Фразавыя дзеясловы'
+  vocabular: 'Лексіка'
+  start_test: 'Пачаць тэст'
+  main_page: Галоўная
+  user: Карыстальнік
+  users: Карыстальнікі
+  topics: Тэмы
+  sign_out: Выйсці
+  sign_in: Увайсці
+  sign_up: Зарэгістравацца

@@ -1,0 +1,18 @@
+defaults: &defaults
+    en:
+        use_case: false
+        use_gender: false
+        translation_first: false
+    de:
+        use_case: true
+        use_gender: true
+        translation_first: true
+
+development:
+    <<: *defaults
+
+test:
+    <<: *defaults
+
+production:
+    <<: *defaults

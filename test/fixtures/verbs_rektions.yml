@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  verb: MyString
+  preposition: MyString
+  case: MyString
+  translation: MyString
+
+two:
+  verb: MyString
+  preposition: MyString
+  case: MyString
+  translation: MyString

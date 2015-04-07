@@ -1,0 +1,31 @@
+<h1><%= t :words %></h1>
+
+<table class="table table-striped">
+  <tr>
+  	<th><%= t :article %></th>
+    <th><%= t :word %></th>
+    <th><%= t :translation %></th>
+    <th><%= t :level %></th>
+    <th><%= t :topic %></th>
+    <th><%= t :speech_part %></th>
+    <th></th>
+  </tr>
+
+<% @words.each do |word| %>
+  <tr>
+  	<td><%= word.article %></td>
+    <td><%= word.word %></td>
+    <td><%= word.translation %></td>
+    <td><%= word.topic.level.name%></td>
+    <td><%= word.topic.name%></td>
+  	<td><%= t word.speech_part %></td>
+    <td><%= link_to 'Show', word %>
+        <%= link_to 'Edit', edit_word_path(word) %>
+        <%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Neue Wort', new_word_path %>

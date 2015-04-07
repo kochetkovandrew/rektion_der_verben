@@ -1,0 +1,40 @@
+en:
+  noun: 'Noun'
+  adjective: 'Adjective'
+  verb: 'Verb'
+  article: 'Article'
+  word: 'Word'
+  translation: 'Translation'
+  level: 'Level'
+  topic: 'Topic'
+  speech_part: 'Part of speech'
+  part: 'Part'
+  words: 'Words'
+  phrasal_verbs: 'Phrasal verbs'
+  vocabular: 'Vocabular'
+  level: 'Level'
+  start_test: Start test
+  main_page: Main page
+  user: User
+  users: Users
+  topics: Topics
+  sign_out: Sign out
+  sign_in: Sign in
+  sign_up: Sign up
+  password: Password
+  case: Case
+  preposition: Preposition
+  translation: Translation
+  correct: Correct
+  incorrect: Incorrect
+  your_language: Your language
+  you_learn: You learn
+  check: Check
+  js:
+    preposition: Preposition
+    translation: Translation
+    you_know: You know
+    words: words
+    incorrect_answers: Incorrect answers
+    all_is_ok: 'ALL IS OK!'
+    part: Part

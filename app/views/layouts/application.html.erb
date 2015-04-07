@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lernen Deutsch</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag %>
+</head>
+<body>
+<%= hidden_field_tag 'set_locale', I18n.locale %>
+<div class="container">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<%= link_to t(:main_page), { controller: '/main', action: :index } %>
+		</li>
+		<% if user_signed_in? && current_user.admin %>
+			<li class="">
+				<%= link_to t(:phrasal_verbs), { controller: '/verbs', action: :index } %>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= t :vocabular %><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+						<%= link_to t(:topics), { controller: '/topics', action: :index } %>
+					</li>
+					<li>
+						<%= link_to t(:words), { controller: '/words', action: :index } %>
+					</li>
+				</ul>
+			</li>
+			<li class="">
+				<%= link_to t(:users), { controller: '/users', action: :index } %>
+			</li>
+		<% end %>
+		<% if user_signed_in? %>
+			<li class="">
+				<%= link_to t(:sign_out), destroy_user_session_path, :method => :delete %>
+			</li>
+		<% else %>
+			<li class="">
+				<%= link_to t(:sign_in), new_user_session_path %>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+<div class="padded">
+	<%= yield %>
+</div>
+
+<p class="text-center">
+	<small>© Andrey Kochetkov, 2014</small>
+</p>
+
+</body>
+</html>

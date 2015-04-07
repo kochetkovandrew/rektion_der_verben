@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Verb:</b>
+  <%= @verb.verb %>
+</p>
+
+<p>
+  <b>Preposition:</b>
+  <%= @verb.preposition %>
+</p>
+
+<p>
+  <b>Case:</b>
+  <%= @verb.case %>
+</p>
+
+<p>
+  <b>Translation:</b>
+  <%= @verb.translation %>
+</p>
+
+
+<%= link_to 'Edit', edit_verb_path(@verb) %> |
+<%= link_to 'Back', verbs_path %>

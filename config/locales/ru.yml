@@ -1,0 +1,33 @@
+ru:
+  noun: 'Существительное'
+  adjective: 'Прилагательное'
+  verb: 'Глагол'
+  article: 'Артикль'
+  word: 'Слово'
+  translation: 'Перевод'
+  level: 'Уровень'
+  topic: 'Тема'
+  speech_part: 'Часть речи'
+  part: 'Часть'
+  words: 'Слова'
+  phrasal_verbs: 'Глаголы с управлением'
+  vocabular: 'Лексика'
+  start_test: 'Начать тест'
+  main_page: Главная
+  user: Пользователь
+  users: Пользователи
+  topics: Темы
+  sign_out: Выйти
+  sign_in: Войти
+  sign_up: Зарегистрироваться
+  password: Пароль
+  case: Падеж
+  preposition: Предлог
+  translation: Перевод
+  correct: Правильно
+  incorrect: Неправильно
+  your_language: Ваш язык
+  you_learn: Вы учите
+  js:
+    preposition: Предлог
+    translation: Перевод

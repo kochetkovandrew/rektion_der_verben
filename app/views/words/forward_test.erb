@@ -1,0 +1,33 @@
+<%= hidden_field_tag :page_id, 'words_forward_test' %>
+<%=hidden_field_tag :ids, @words.shuffle.collect{|w| w.id}.join(',')%>
+
+<p>&nbsp;</p>
+<div id="quiz">
+	<p id="entity">
+	</p>
+	<div id="article">
+		<h3><%= t(:article).mb_chars.upcase.to_s %></h3>
+		<label class="radio inline clickable_case"><input type="radio" name="article" value="der">der</label>
+		<label class="radio inline clickable_case"><input type="radio" name="article" value="die">die</label>
+		<label class="radio inline clickable_case"><input type="radio" name="article" value="das">das</label>
+	</div>
+	<p id="translations">
+	</p>
+</p>
+
+<p id="button_p">
+    <button id="check" class="btn btn-primary btn-xlarge" type="button">Checken</button>
+</p>
+
+<div id="right">
+	<h2><%= t(:correct).mb_chars.upcase.to_s %></h2>
+</div>
+<div id="wrong">
+	<h2><%= t(:incorrect).mb_chars.upcase.to_s %></h2>
+</div>
+
+<p id="error_count">
+</p>
+
+<p id="right_answers">
+</p>
